@@ -74,14 +74,20 @@ Get the latest build from [Releases](../../releases/latest).
 
 **Windows:** run `Stick.Timer_x.y.z_x64-setup.exe`.
 
-**macOS** (Apple Silicon and Intel): open the `.dmg` and drag Stick Timer to Applications.
-The app isn't notarized by Apple, so macOS blocks it the first time. Either run this once in Terminal:
+**macOS** (Apple Silicon and Intel):
+
+1. Open the `.dmg` and drag **Stick Timer** to **Applications**.
+2. Open Stick Timer. macOS says *"Stick Timer" Not Opened* because the app isn't notarized by Apple (that needs a paid developer account). Click **Done**.
+3. Open **System Settings › Privacy & Security** and scroll down to **Security**. You'll see *"Stick Timer" was blocked to protect your Mac*. Click **Open Anyway**. The button shows for about an hour after step 2.
+4. Enter your password, then click **Open Anyway** again.
+
+You only do this once. After that it opens normally. Apple explains this in [Open a Mac app from an unknown developer](https://support.apple.com/guide/mac-help/mh40616/mac).
+
+Prefer the Terminal? This does the same thing:
 
 ```sh
 xattr -dr com.apple.quarantine "/Applications/Stick Timer.app"
 ```
-
-or try to open it, then go to **System Settings › Privacy & Security** and click **Open Anyway**.
 
 ## Build from source
 
